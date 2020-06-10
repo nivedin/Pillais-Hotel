@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Arizonia&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -38,6 +39,10 @@
     
             <h1>Pillai snack</h1>
         </div>
+        <div id="quotes">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, ullam?</p>
+            <p><br>--name</p>
+        </div>
     </div>
     <div class="main">
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit eveniet doloremque neque molestias. Et fugiat quos labore laboriosam laudantium ullam?</p>
@@ -49,42 +54,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script>
-        const slider = document.querySelector('.wrapper');
-        const content = document.querySelector('.content');
-        const nav = document.querySelector('nav');
-
-        var tl = new TimelineMax();
-
-        tl.fromTo(content,1,{opacity:0,x:30},{opacity:1,x:0})
-        .fromTo(nav,1,{opacity:0,y:-30},{opacity:1,y:0})
-
-        tl.to('path#start', 1, {
-            x: '-10%',
-            ease: Expo.easeInOut
-        })
-
-        tl.to("path#start", 1, {
-            attr: {
-                d: "M24-48H391.837C193.4,367.237,565.913,513.078,391.473,1032.037c0,.053-367.473,0-367.473,0Z",
-                d: "M24-48H391.837C193.4,367.237,565.913,513.078,391.473,1032.037c0,.053-367.473,0-367.473,0Z",
-            },
-            ease:Elastic.easeOut
-        },"-=.1")
-
-       const hamburger = document.querySelector('.hamburger');
-       const navLinks = document.querySelector('.nav-links');
-       const links = document.querySelectorAll('.nav-links li');
-
-       hamburger.addEventListener('click',() => {
-           navLinks.classList.toggle('open');
-           links.forEach(link => {
-               link.classList.toggle('fade');
-           });
-       });
-
-
-    </script>
+    <script src="./app.js"></script>
 </body>
 
 </html>
